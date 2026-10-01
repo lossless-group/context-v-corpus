@@ -4,7 +4,7 @@
 >
 > Generating a fully-featured splash page — search, three viewing modes, coherent theme CSS, full markdown rendering — now takes **5 minutes**. Only with context vigilance.
 
-> **Renamed 2026-10-01** from `context-vigilance-kit`. This repo is now the *corpus*: the collated `context-v/` of every Lossless repo, plus the manifests, ingesters, and splash built on it. It is for collaborators working across many projects. The installable plugin, templates, and starters live in a separate lean repo, [`context-vigilance-kit`](https://github.com/lossless-group/context-vigilance-kit). Why they were split: `context-v/issues/Plugin-Install-Would-Clone-the-Whole-Corpus.md`.
+> **Renamed 2026-10-01** from `context-vigilance-kit`. This repo is now the *corpus*: the collated `context-v/` of every Lossless repo, plus the manifests, ingesters, and splash built on it. It is for collaborators working across many projects. The installable plugin, templates, and starters live in a separate lean repo, [`context-vigilance-kit`](https://github.com/lossless-group/context-vigilance-kit). Why they were split, and the plugin design docs that moved with it: `context-v/` in that repo, starting with `issues/Plugin-Install-Would-Clone-the-Whole-Corpus.md`.
 
 Tooling for the **Context Vigilance** practice — collating, indexing, and eventually publishing the `context-v/` directories scattered across [The Lossless Group](https://github.com/lossless-group) tree (and beyond) as a single, queryable corpus. Brand site: [contextvigilance.com](https://contextvigilance.com) (forthcoming). Scope, rationale, and decision history live in the parent exploration: [[Collate-Context-Files-into-Context-Vigilance-as-Repo-&-Project]] (under `ai-labs/context-v/explorations/`).
 
