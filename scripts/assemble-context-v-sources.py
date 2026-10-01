@@ -42,7 +42,7 @@ SKIP_DIRS = {
 # Path substrings to skip (covers e.g. corpus output directories anywhere
 # under the kit, including ones nested in submodules of submodules).
 SKIP_SUBSTRINGS = (
-    "/context-vigilance-kit/corpus/",
+    "/context-v-corpus/corpus/",
     "/.git/modules/",
 )
 

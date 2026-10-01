@@ -11,8 +11,8 @@
  *
  * Conformance note: the spec assumes the file lives at the host root
  * (https://host/llms.txt). Until DNS for contextvigilance.com lands, the
- * splash deploys under a path (/context-vigilance-kit/), so the file lives
- * at https://lossless-group.github.io/context-vigilance-kit/llms.txt.
+ * splash deploys under a path (/context-v-corpus/), so the file lives
+ * at https://lossless-group.github.io/context-v-corpus/llms.txt.
  * Tools pointed explicitly at that URL still work; convention-based
  * discovery starts working once `astro.config.mjs` flips `base` to '/'.
  */

@@ -3,15 +3,15 @@ import { defineConfig } from 'astro/config';
 import pagefind from 'astro-pagefind';
 import sitemap from '@astrojs/sitemap';
 
-// Splash for context-vigilance-kit — catalog of context-v files across
+// Splash for context-v-corpus — catalog of context-v files across
 // the Lossless Group tree.
 //
-// Live URL: https://lossless-group.github.io/context-vigilance-kit/
+// Live URL: https://lossless-group.github.io/context-v-corpus/
 // Custom domain (post-DNS): contextvigilance.com — set `site` to the domain
 // and `base` to '/' when DNS lands.
 export default defineConfig({
   site: 'https://lossless-group.github.io',
-  base: '/context-vigilance-kit/',
+  base: '/context-v-corpus/',
   trailingSlash: 'ignore',
 
   integrations: [

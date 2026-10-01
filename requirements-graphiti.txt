@@ -1,4 +1,4 @@
-# context-vigilance-kit — Graphiti (temporal knowledge graph) dependencies
+# context-v-corpus — Graphiti (temporal knowledge graph) dependencies
 #
 # Kept separate from requirements.txt on purpose. The Chroma path is cheap
 # and local; the Graphiti path drags in a graph driver and an LLM SDK and

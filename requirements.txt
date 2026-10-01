@@ -1,4 +1,4 @@
-# context-vigilance-kit dependencies
+# context-v-corpus dependencies
 #
 # Install with `uv` (preferred):
 #     uv pip install -r requirements.txt

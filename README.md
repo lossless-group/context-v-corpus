@@ -1,8 +1,10 @@
-# context-vigilance-kit
+# context-v-corpus
 
 > Treat context files with the same vigilance as code, and *context becomes the code* — or the parent to it. Regenerating code, fixing bugs, refactoring, even migrating across languages or tech stacks — work that used to take days, weeks, or months — compresses to minutes.
 >
 > Generating a fully-featured splash page — search, three viewing modes, coherent theme CSS, full markdown rendering — now takes **5 minutes**. Only with context vigilance.
+
+> **Renamed 2026-10-01** from `context-vigilance-kit`. This repo is now the *corpus*: the collated `context-v/` of every Lossless repo, plus the manifests, ingesters, and splash built on it. It is for collaborators working across many projects. The installable plugin, templates, and starters live in a separate lean repo, [`context-vigilance-kit`](https://github.com/lossless-group/context-vigilance-kit). Why they were split: `context-v/issues/Plugin-Install-Would-Clone-the-Whole-Corpus.md`.
 
 Tooling for the **Context Vigilance** practice — collating, indexing, and eventually publishing the `context-v/` directories scattered across [The Lossless Group](https://github.com/lossless-group) tree (and beyond) as a single, queryable corpus. Brand site: [contextvigilance.com](https://contextvigilance.com) (forthcoming). Scope, rationale, and decision history live in the parent exploration: [[Collate-Context-Files-into-Context-Vigilance-as-Repo-&-Project]] (under `ai-labs/context-v/explorations/`).
 
@@ -42,7 +44,7 @@ The [[context-vigilance]] skill is the source of truth; summary here for orienta
 ## What's in here (v0)
 
 ```
-context-vigilance-kit/
+context-v-corpus/
 ├── README.md                          ← you are here
 ├── sources.md                         ← curated list of source dirs (generated, then human-curated)
 ├── corpus-manifest.md                 ← per-file triage view (yaml & content line counts; auto-generated)
@@ -179,7 +181,7 @@ ontology, and the open questions: **`context-v/explorations/Graphiti-Over-The-Lo
 ```bash
 cd splash
 pnpm install --ignore-workspace   # one-time; ai-labs's pnpm-workspace doesn't include this dir
-pnpm dev                          # http://localhost:4321/context-vigilance-kit/
+pnpm dev                          # http://localhost:4321/context-v-corpus/
 pnpm build                        # writes static site to splash/dist/
 pnpm preview                      # serves dist/ locally
 ```
@@ -198,7 +200,7 @@ The kit ships a `.mcp.json` that wires the Chroma MCP server into Claude Code at
       "command": "uvx",
       "args": [
         "chroma-mcp", "--client-type", "persistent",
-        "--data-dir", "/abs/path/to/context-vigilance-kit/.chroma"
+        "--data-dir", "/abs/path/to/context-v-corpus/.chroma"
       ]
     }
   }
@@ -293,7 +295,7 @@ The collator does not modify originals. It writes copies into `corpus/` with the
 
 ## Repo status
 
-The kit lives at **<https://github.com/lossless-group/context-vigilance-kit>** (public) and is mounted in `ai-labs/` as a git submodule — the promotion this section once described as "next step" is done. Work happens inside the submodule; ai-labs tracks the gitlink. Branch tiers follow the tree-wide model: `development` → `main` → `master`.
+The corpus lives at **<https://github.com/lossless-group/context-v-corpus>** (public) and is mounted at the anchor monorepo root as `lossless-monorepo/context-v-corpus/`, a git submodule. It moved there from `ai-labs/context-vigilance-kit/` on 2026-10-01, because it walks the whole tree rather than one child. Work happens inside the submodule, and the anchor tracks the gitlink. Branch tiers follow the tree-wide model: `development` → `main` → `master`.
 
 ## Related
 

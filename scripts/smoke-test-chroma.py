@@ -30,7 +30,7 @@ SAMPLE_FILES = [
     "/Users/mpstaton/code/lossless-monorepo/context-v/skills/context-vigilance/SKILL.md",
     "/Users/mpstaton/code/lossless-monorepo/ai-labs/context-v/explorations/Collate-Context-Files-into-Context-Vigilance-as-Repo-&-Project.md",
     "/Users/mpstaton/code/lossless-monorepo/ai-labs/context-v/explorations/ChromaDB-as-Context-Improvement-Across-Everything-Everyone.md",
-    "/Users/mpstaton/code/lossless-monorepo/ai-labs/context-vigilance-kit/README.md",
+    "/Users/mpstaton/code/lossless-monorepo/context-v-corpus/README.md",
 ]
 
 QUERIES = [
@@ -55,7 +55,7 @@ def main() -> int:
 
     collection = client.create_collection(
         name=COLLECTION_NAME,
-        metadata={"description": "Smoke test for context-vigilance-kit Chroma integration."},
+        metadata={"description": "Smoke test for context-v-corpus Chroma integration."},
     )
 
     docs: list[str] = []

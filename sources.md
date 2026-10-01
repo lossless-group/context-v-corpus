@@ -3,7 +3,7 @@ title: Context Vigilance Kit — Sources
 description: Curated list of context-v/ directories and legacy roots that the collator
   pulls from.
 date_created: '2026-05-07'
-date_modified: '2026-08-24'
+date_modified: '2026-10-01'
 schema_version: 1
 sources:
 - path: /Users/mpstaton/code/lossless-monorepo/ai-labs/augment-it/context-v
@@ -23,6 +23,12 @@ sources:
   kind: context-v
   include: true
   note: auto-discovered 2026-05-07; review.
+- path: /Users/mpstaton/code/lossless-monorepo/context-v-corpus/context-v
+  kind: context-v
+  include: true
+  note: added 2026-10-01 when this repo was renamed from context-vigilance-kit and moved
+    to the anchor root. The ai-labs/context-vigilance-kit entry above now points at the
+    new, separate kit repo.
 - path: /Users/mpstaton/code/lossless-monorepo/ai-labs/corpora-builder/context-v
   kind: context-v
   include: true

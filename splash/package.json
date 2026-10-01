@@ -1,9 +1,9 @@
 {
-  "name": "context-vigilance-kit-splash",
+  "name": "context-v-corpus-splash",
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "description": "GitHub Pages splash for context-vigilance-kit — catalog of context-v files across the Lossless tree.",
+  "description": "GitHub Pages splash for context-v-corpus — catalog of context-v files across the Lossless tree.",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

@@ -205,7 +205,7 @@ def build_llm_client(settings: GraphitiSettings, require_key: bool = True):
             "error: ANTHROPIC_API_KEY is not set.\n"
             "  Graphiti needs a raw Anthropic API key for entity extraction — it\n"
             "  cannot borrow Claude Code's session auth. Put it in\n"
-            "  context-vigilance-kit/.env (gitignored) or export it.\n"
+            "  context-v-corpus/.env (gitignored) or export it.\n"
             "  Get one at https://console.anthropic.com/settings/keys"
         )
 

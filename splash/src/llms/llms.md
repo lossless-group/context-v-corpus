@@ -8,7 +8,7 @@ Treat context with the same vigilance as code — versioned, reviewed, cross-lin
 
 - [Full-text search]({{SEARCH_URL}}): Pagefind-indexed across the corpus.
 - [Full corpus content]({{LLMS_FULL_URL}}): every corpus entry concatenated as raw markdown — preferred ingest target for LLMs that can handle a single large document.
-- [Source repository](https://github.com/lossless-group/context-vigilance-kit): the kit, the spec, and the collator.
+- [Source repository](https://github.com/lossless-group/context-v-corpus): the kit, the spec, and the collator.
 - [Lossless Group](https://lossless.group): the org that maintains this practice.
 
 ## Corpus
