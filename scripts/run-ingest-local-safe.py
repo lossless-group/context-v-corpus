@@ -53,14 +53,40 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 PRIMITIVES = (str, int, float, bool, type(None))
 
+# Neo4j integers are signed 64-bit. An out-of-range value raises OverflowError
+# in the driver before Cypher ever sees it (observed 2026-08-24 on a model-
+# emitted -14893665021920517333).
+INT64_MIN = -(2 ** 63)
+INT64_MAX = 2 ** 63 - 1
+
+
+def _storable_scalar(value):
+    """One primitive, made storable. Returns `value` itself when already fine."""
+    # bool subclasses int — test it first so True is not range-checked as 1.
+    if isinstance(value, bool) or not isinstance(value, int):
+        return value
+    if INT64_MIN <= value <= INT64_MAX:
+        return value
+    # Keep the digits as text rather than losing them to a clamp.
+    return str(value)
+
 
 def _coerce(value):
     """Return a Neo4j-storable version of one attribute value."""
     if isinstance(value, PRIMITIVES):
-        return value
+        return _storable_scalar(value)
     if isinstance(value, list) and all(isinstance(i, PRIMITIVES) for i in value):
-        return value
-    # Nested dict, list-of-dicts, or anything else Neo4j will reject.
+        # A list of "primitives" is NOT automatically storable: type(None) is a
+        # primitive here, but Neo4j rejects arrays holding nulls ("Collections
+        # containing null values can not be stored in properties" — observed
+        # 2026-08-23), and it rejects mixed-type arrays. Drop the nulls; if what
+        # survives is not uniformly typed, fall through to the JSON string.
+        kept = [i for i in value if i is not None]
+        if len({type(i) for i in kept}) <= 1 and all(
+            _storable_scalar(i) is i for i in kept
+        ):
+            return value if kept == value else kept
+    # Nested dict, list-of-dicts, mixed-type list, or anything else Neo4j rejects.
     return json.dumps(value, ensure_ascii=False, default=str)
 
 
